@@ -10,6 +10,8 @@ Guide d'installation de notre site WEB:
 
 • Télécharger XAMPP pour pouvoir accéder a notre site en local: https://www.apachefriends.org/fr/index.html
 
+• Pour configurer Xampp pour l'envoie de mail en local, suivez ce lien : https://waytolearnx.com/2019/07/comment-envoyer-un-mail-depuis-localhost-en-php.html
+
 • Sur ce gitHub, cliquez sur le bouton « Clone or Dowload » puis «
 Download ZIP ».
 
@@ -24,3 +26,4 @@ Download ZIP ».
 • Creez une nouvelle base de donnée nommée "gestion_commande" et sélectionnez la.
 
 • Tapez « localhost/connexion.php » dans votre barre de recherche pour arriver sur la page de connexion de la plateforme.
+
