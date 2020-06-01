@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 01 juin 2020 à 13:34
+-- Généré le :  lun. 01 juin 2020 à 13:42
 -- Version du serveur :  10.1.38-MariaDB
 -- Version de PHP :  7.3.3
 
@@ -50,13 +50,6 @@ CREATE TABLE `demande_enseignant` (
   `commentaire` text
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
---
--- Déchargement des données de la table `demande_enseignant`
---
-
-INSERT INTO `demande_enseignant` (`id`, `UE`, `nom`, `description`, `commentaire`) VALUES
-(26, 'INFO642', 'NEPAUL', '', '');
-
 -- --------------------------------------------------------
 
 --
@@ -78,13 +71,6 @@ CREATE TABLE `demande_materiel` (
   `mail` text,
   `enseignant` text
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `demande_materiel`
---
-
-INSERT INTO `demande_materiel` (`id_demande`, `numero`, `description`, `ligne_budgetaire`, `produit_concerne`, `quantite`, `fournisseur`, `prix_unitaire`, `lien_vers_site`, `image`, `jour`, `mail`, `enseignant`) VALUES
-(26, 1234566, 'finalement', 123465, 'PC', '234', 'apple', '1234', 'http://fnac.com', NULL, '2020-06-25', 'yoann.raguenes.29@gmail.com', 'NEPAUL');
 
 -- --------------------------------------------------------
 
