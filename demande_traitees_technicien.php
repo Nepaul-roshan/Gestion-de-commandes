@@ -64,6 +64,7 @@ if (is_null($_SESSION['id_serv']) AND !empty($_SESSION['id_etud']) AND isset($_S
 				echo "<label>Demandes</label> : <select name='demande'>";
 						foreach ($result as $row) {
 							$temp = $row['id_suivi'];
+							
 							$sql = "SELECT * FROM toute_demandes WHERE id = '$temp'";
 							$sth = $base->prepare($sql);
 							$sth->execute();
@@ -83,7 +84,7 @@ if (is_null($_SESSION['id_serv']) AND !empty($_SESSION['id_etud']) AND isset($_S
 
 		<div id="footer">
 		<br>Site réalisé par Adrien Simard, Roshan Nepaul, Kévin Fanton et Yoann Raguenes</br>
-		<br> Etudiants en 3ème année de la filière IDU de Polytech Annecy-Chambéry</br>
+		<br> Etudiants en 3ème année de la filière IDU de Polytech Annecy-Chambéry</br>	
 			
 		</div>
 	</body>

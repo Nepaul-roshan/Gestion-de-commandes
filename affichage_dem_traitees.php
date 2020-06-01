@@ -36,11 +36,13 @@
 		<?php
 			include("connect_bdd.php");
 			$demande = $_POST['demande'];	
+
 			$sql = "SELECT * FROM toute_demandes WHERE description = '".$demande."'";
 			$sth = $base->prepare($sql);
 			$sth->execute();
 			$result = $sth->fetchAll();
 			$id = $result[0][0];
+
 			$numero = $result[0][1];
 			$description = $result[0][2];
 			$budget = $result[0][3];
@@ -93,9 +95,15 @@
 					echo "<br>";
 					echo "Commentaire de l'enseignant :",$commentaire;
 					echo "<br>";
-					echo "<form action = 'validation_demande_technique.php' method='post'>";
+					
+
+					echo "<form action = 'commande_recu.php' method='post'>";
+					echo "<p><label>Confirmation de l'id de la commande reçu</label> : <input type='text' name='id' /></p>";
+					echo "<input type='submit' id='bouton_recu' value='Confirmer'>";
 					echo "</form>";
+
 					?>
+					
 			</fieldset>
 				
 		</div>
