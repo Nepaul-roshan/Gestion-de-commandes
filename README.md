@@ -23,7 +23,7 @@ Download ZIP ».
 
 • Connectez-vous avec « root » comme pseudo et aucun mot de passe.
 
-• Creez une nouvelle base de donnée nommée "gestion_commande" et sélectionnez la.
+• Creez une nouvelle base de donnée nommée "gestioncommande" et sélectionnez la.
 
 • Tapez « localhost/connexion.php » dans votre barre de recherche pour arriver sur la page de connexion de la plateforme.
 
