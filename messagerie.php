@@ -36,7 +36,7 @@
                  <fieldset>
                     <legend>Messagerie de <?= $nom ?> <?= $prenom ?> </legend>
                     <p>
-                    <label for="email_envoie">Votre adresse mail</label> : <input type="text" name="email_envoie" value = <?= $mail ?> required= "" /><br />
+                   
 
                     <label for="email_recu">Destinataire</label> : <input type="text" name="email_recu" placeholder="Son adresse mail" required="" /><br />
                     

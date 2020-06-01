@@ -19,7 +19,7 @@ if(isset($_POST['insertion']))
 	{
 		
 		$req = $base->prepare('INSERT INTO messagerie (email, message, destinataire) VALUES(?, ?, ?)');
-		$req->execute(array($_POST['email_envoie'], $_POST['message'], $_POST['email_recu']));
+		$req->execute(array($_SESSION['email'], $_POST['message'], $_POST['email_recu']));
 		$ok = "Email envoyé";
 
 	}
