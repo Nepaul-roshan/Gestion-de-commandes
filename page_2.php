@@ -57,7 +57,7 @@ if (is_null($_SESSION['id_etud']) AND !empty($_SESSION['id_serv']) AND isset($_S
 					<legend>Ajout Demande</legend>
 					<p><label>Numéro étudiant</label> : <input type='text' value = <?= $_SESSION['num_etu'] ?> name='numero' /></p>
 					<p><label>Description du projet</label> : <textarea type='text' name='description' required= ""></textarea></p>
-					<p><label>Nom de l'enseignant (en majuscule)</label> : <input type='text' name='enseignant' /></p>
+					<p><label>Nom de l'enseignant (en majuscule)</label> : <input type='text' name='enseignant' required = "" /></p>
 					<p><label>Ligne budgétaire</label> : <input type='number' name='budget' /></p>
 					<p><label>Produits concernés</label> : <input type='text' name='produits' /></p>
 					<p><label>Quantité</label> : <input type='text' name='quantite' /></p>

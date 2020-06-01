@@ -10,7 +10,7 @@ if (is_null($_SESSION['id_prof']) AND !empty($_SESSION['id_serv']) AND isset($_S
 	exit();
 }
 
-	
+$nom = $_SESSION['nom'];	
 
 
 	
@@ -55,7 +55,7 @@ if (is_null($_SESSION['id_prof']) AND !empty($_SESSION['id_serv']) AND isset($_S
 			<?php
 				
 				include("connect_bdd.php");
-				$sql =  "SELECT * FROM suivi_demande_materiel WHERE etat LIKE 'etat1'";
+				$sql =  "SELECT * FROM suivi_demande_materiel  WHERE etat LIKE 'etat1'";
 						$sth = $base->prepare($sql);
 						$sth->execute();
 						$result = $sth->fetchAll();?>
@@ -71,7 +71,7 @@ if (is_null($_SESSION['id_prof']) AND !empty($_SESSION['id_serv']) AND isset($_S
 				
 						foreach ($result as $row) {
 							$temp = $row['id_suivi'];
-							$sql = "SELECT * FROM toute_demandes WHERE id = '$temp'";
+							$sql = "SELECT * FROM toute_demandes WHERE id = '$temp' AND nom = '$nom'";
 							$sth = $base->prepare($sql);
 							$sth->execute();
 							$resultat = $sth->fetchAll();
