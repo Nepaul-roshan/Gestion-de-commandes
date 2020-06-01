@@ -9,10 +9,7 @@
 	
 		<div id="entete">
 		
-			<div id="cadreConnec">
-			<?php $_SESSION['nom']." ".$_SESSION['prenom']?>
-			<p><a href="deconnexion.php">Se déconnecter</p></a>
-			</div>		
+
 		
 			<div id="Bienvenue">
 			<h1>Bienvenue sur la plateforme de commande de matériel</h1>
@@ -26,11 +23,10 @@
 		<div id="main">
 			<div id="menu">
 				<input type="submit" id='submit'onclick=window.location.href='accTechnicien.php' value='ACCUEIL' >
-				<input type="submit" id='submit'onclick=window.location.href='demande_attente_technicien.php' value='DEMANDES EN ATTENTE' >
-				<input type="submit" id='submit'onclick=window.location.href='demande_traitees_technicien.php' value='DEMANDES TRAITEES' >
-				<input type="submit" id='submit' value='CONTACTER UN ENSEIGNANT' >
-				<input type="submit" id='submit' value='CONTACTER UN ELEVE' >
-				<input type="submit" id='submit' value='RESULTATS ENQUETE' >
+			<input type="submit" id='submit'onclick=window.location.href='page_2_enseignant.php' value='DEMANDES EN ATTENTE' >
+				<input type="submit" id='submit'onclick=window.location.href='demande_traitees_enseignant.php' value='DEMANDES TRAITEES' >
+					<input type="submit" id='submit' onclick=window.location.href='messagerie.php' value='MESSAGERIE' >
+			
 				<div id="logopopo">
 				<img src="images\logoPOPO.jpg" alt="" />
 			</div>

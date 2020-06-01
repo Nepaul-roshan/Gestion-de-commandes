@@ -55,8 +55,8 @@ if (is_null($_SESSION['id_etud']) AND !empty($_SESSION['id_serv']) AND isset($_S
 			<form action = 'ajout_demande.php' method='post'>
 				<fieldset>
 					<legend>Ajout Demande</legend>
-					<p><label>Numéro étudiant</label> : <input type='text' name='numero' /></p>
-					<p><label>Description du projet</label> : <textarea type='text' name='description'></textarea></p>
+					<p><label>Numéro étudiant</label> : <input type='text' value = <?= $_SESSION['num_etu'] ?> name='numero' /></p>
+					<p><label>Description du projet</label> : <textarea type='text' name='description' required= ""></textarea></p>
 					<p><label>Nom de l'enseignant (en majuscule)</label> : <input type='text' name='enseignant' /></p>
 					<p><label>Ligne budgétaire</label> : <input type='number' name='budget' /></p>
 					<p><label>Produits concernés</label> : <input type='text' name='produits' /></p>
@@ -66,7 +66,7 @@ if (is_null($_SESSION['id_etud']) AND !empty($_SESSION['id_serv']) AND isset($_S
 					<p><label>Lien vers site marchand</label> : <input type='url' name='lien' /></p>
 					<p><label>Image du produit</label> : <input type='file' name='image' /></p>
 					<p><label>Date de demande</label> : <input type='date' name='date' /></p>
-					<p><label>Mail pour suivi de l'avancement</label> : <input type='mail' name='mail' /></p>
+					<p><label>Mail pour suivi de l'avancement</label> : <input type='mail' name='mail' value = <?= $_SESSION['email'] ?> /></p>
 					<br>
 					<input type='submit' id='submit2' value='Ajouter'>
 				

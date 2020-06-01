@@ -50,7 +50,7 @@ if (is_null($_SESSION['id_etud']) AND !empty($_SESSION['id_serv']) AND isset($_S
 
 		<div id="contenu">
 			<?php
-			$numero = "11704669";					
+			$numero = $_SESSION['num_etu'];					
 			
 			include("connect_bdd.php");
 			$sql =  "SELECT *

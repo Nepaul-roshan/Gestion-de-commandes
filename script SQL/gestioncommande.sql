@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 01 juin 2020 à 11:16
+-- Généré le :  lun. 01 juin 2020 à 13:34
 -- Version du serveur :  10.1.38-MariaDB
 -- Version de PHP :  7.3.3
 
@@ -50,6 +50,13 @@ CREATE TABLE `demande_enseignant` (
   `commentaire` text
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Déchargement des données de la table `demande_enseignant`
+--
+
+INSERT INTO `demande_enseignant` (`id`, `UE`, `nom`, `description`, `commentaire`) VALUES
+(26, 'INFO642', 'NEPAUL', '', '');
+
 -- --------------------------------------------------------
 
 --
@@ -71,6 +78,13 @@ CREATE TABLE `demande_materiel` (
   `mail` text,
   `enseignant` text
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `demande_materiel`
+--
+
+INSERT INTO `demande_materiel` (`id_demande`, `numero`, `description`, `ligne_budgetaire`, `produit_concerne`, `quantite`, `fournisseur`, `prix_unitaire`, `lien_vers_site`, `image`, `jour`, `mail`, `enseignant`) VALUES
+(26, 1234566, 'finalement', 123465, 'PC', '234', 'apple', '1234', 'http://fnac.com', NULL, '2020-06-25', 'yoann.raguenes.29@gmail.com', 'NEPAUL');
 
 -- --------------------------------------------------------
 
@@ -204,6 +218,14 @@ CREATE TABLE `suivi_demande_materiel` (
   `etat` text
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Déchargement des données de la table `suivi_demande_materiel`
+--
+
+INSERT INTO `suivi_demande_materiel` (`id_suivi`, `etat`) VALUES
+(26, 'etat3'),
+(0, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -228,6 +250,13 @@ CREATE TABLE `toute_demandes` (
   `description_e` text,
   `commentaire` text
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `toute_demandes`
+--
+
+INSERT INTO `toute_demandes` (`id`, `numero`, `description`, `ligne_budgetaire`, `produit_concerne`, `quantite`, `fournisseur`, `prix_unitaire`, `lien_vers_site`, `image`, `jour`, `mail`, `UE`, `nom`, `description_e`, `commentaire`) VALUES
+(26, 1234566, 'finalement', 123465, 'PC', '234', 'apple', '1234', 'http://fnac.com', NULL, '2020-06-25', 'yoann.raguenes.29@gmail.com', 'INFO642', 'NEPAUL', '', '');
 
 --
 -- Index pour les tables déchargées
@@ -316,13 +345,13 @@ ALTER TABLE `toute_demandes`
 -- AUTO_INCREMENT pour la table `avis`
 --
 ALTER TABLE `avis`
-  MODIFY `id_avis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_avis` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `demande_materiel`
 --
 ALTER TABLE `demande_materiel`
-  MODIFY `id_demande` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_demande` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT pour la table `enseignant`
@@ -346,7 +375,7 @@ ALTER TABLE `materiel`
 -- AUTO_INCREMENT pour la table `messagerie`
 --
 ALTER TABLE `messagerie`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `personne`
@@ -358,19 +387,13 @@ ALTER TABLE `personne`
 -- AUTO_INCREMENT pour la table `recuperation`
 --
 ALTER TABLE `recuperation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `service_technique`
 --
 ALTER TABLE `service_technique`
   MODIFY `id_service_technique` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT pour la table `suivi_demande_materiel`
---
-ALTER TABLE `suivi_demande_materiel`
-  MODIFY `id_suivi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

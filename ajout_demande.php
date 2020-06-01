@@ -1,4 +1,5 @@
 <?php
+session_start();
 	include("connect_bdd.php");	
 	if(isset($_POST['description']) && isset($_POST['budget']) && isset($_POST['produits']) && isset($_POST['quantite']) && isset($_POST['fournisseur'])&& isset($_POST['prix']) && isset($_POST['lien']) && isset($_POST['date']) && isset($_POST['mail']) && isset($_POST['numero']) && isset($_POST['enseignant'])){
 		$description = $_POST['description'];
@@ -29,9 +30,16 @@
 	    $result = $sth->fetchAll();
 	    $id_demande = $result[$test][0];
 	    
+
+	      $sql = "INSERT INTO suivi_demande_materiel(id_suivi) VALUES ('$id_demande')"; 
+		$sth = $base->prepare($sql);
+		$sth->execute();
+
 	    $sql = "INSERT INTO demande_enseignant (id, UE, nom, description, commentaire) VALUES ('$id_demande', NULL, NULL, NULL, NULL)"; 
 		$sth = $base->prepare($sql);
 		$sth->execute();
+
+
 
 	    $sql = "UPDATE suivi_demande_materiel SET etat = 'etat1' WHERE id_suivi = '$id_demande'";
 	    $sth = $base->prepare($sql);

@@ -151,7 +151,11 @@ input[type=submit] {
 }
 
 
-
+input[type=submit]:hover {
+    background-color: white;
+    color: #0A8BBF;
+    border: 1px solid #0A8BBF;
+}
 
 
 

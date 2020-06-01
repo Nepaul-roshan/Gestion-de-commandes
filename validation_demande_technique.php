@@ -6,6 +6,10 @@
 		$sql = "UPDATE suivi_demande_materiel SET etat = 'etat3' WHERE id_suivi = '$id'";
 		$sth = $base->prepare($sql);
 		$sth->execute();
+
+			header('Location: http://localhost/projet-info642/accTechnicien.php');
+			exit();
+
 	}
 ?>
 

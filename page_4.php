@@ -23,11 +23,7 @@
 	
 		<div id="entete">
 		
-			<div id="cadreConnec">
-			Nom d'utilisateur
-			<p><a href="index.php">Se déconnecter</p></a>
-			</div>
-			
+
 			<div id="Bienvenue">
 			<h1>Bienvenue sur la plateforme de commande de matériel</h1>
 			</div>
@@ -40,9 +36,9 @@
 				<input type="submit" id='submit'onclick=window.location.href='accEtudiant.php' value='ACCUEIL' >
 				<input type="submit" id='submit'onclick=window.location.href='page_2.php' value='FAIRE UNE DEMANDE' >
 				<input type="submit" id='submit'onclick=window.location.href='page_3.php' value='MES DEMANDES' >
-				<input type="submit" id='submit' value='CONTACTER UN ENSEIGNANT' >
-				<input type="submit" id='submit' value='CONTACTER UN TECHNICIEN' >
-				<input type="submit" id='submit' value='ENQUETE DE SATISFACTION' >	
+				<input type="submit" id='submit' onclick=window.location.href='messagerie.php' value='MESSAGERIE' >
+				
+				<input type="submit" id='submit'onclick=window.location.href='qcm.php' value='ENQUETE DE SATISFACTION' >
 				<div id="logopopo">
 				<img src="images\logoPOPO.jpg" alt="" />
 					</div>	
@@ -124,7 +120,7 @@
 						}
 						elseif($valeur_etat == 'etat2'){
 							echo '<div id="barre_50">
-									<h3>Attente avis des techniciens</h3>
+									<h3>Attente avis des techniciens</h3> 
 								  </div>';
 
 						}
