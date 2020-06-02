@@ -30,7 +30,7 @@ if (is_null($_SESSION['id_serv']) AND !empty($_SESSION['id_etud']) AND isset($_S
 			
 			<p><a href="deconnexion.php">Se déconnecter</a></p>
 			</div>		
-			</div>		
+					
 		
 			<div id="Bienvenue">
 			<h1>Bienvenue sur la plateforme de commande de matériel</h1>
