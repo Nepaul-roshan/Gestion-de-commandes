@@ -57,7 +57,7 @@ if (is_null($_SESSION['id_serv']) AND !empty($_SESSION['id_etud']) AND isset($_S
 						$result = $sth->fetchAll();
 						?>
 			<div id="form">
-			<form action = 'affichage_dem_traitees.php' method='post'>
+			<form action = 'affichage_dem_traitees_technicien.php' method='post'>
 				<fieldset>
 					<legend>Consultation des demandes traitées</legend>
 				<?php
